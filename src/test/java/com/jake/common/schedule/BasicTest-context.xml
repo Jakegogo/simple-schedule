@@ -14,7 +14,7 @@ http://www.my9yu.com/common/resource http://www.my9yu.com/common/resource/resour
 
 	<context:annotation-config />
 	
-	<bean class="com.jake.common.schedule.scheduler.impl.ScheduledProcessor" />
+	<bean class="com.jake.common.schedule.annotation.impl.ScheduledProcessor" />
 
 	<bean class="com.jake.common.schedule.scheduler.impl.SimpleScheduler" />
 	
