@@ -255,7 +255,7 @@ public class FixThreadPoolExecutor extends AbstractExecutorService {
 	}
 
 	/* Support for execute(). Method execute() and its helper methods handle the
-	 * various cases encountered when new tasks are submitted. The main
+	 * various cases encountered when new tasks are submitted. The run
 	 * execute() method proceeds in 3 steps: 1. If it appears that fewer than
 	 * corePoolSize threads are running, try to start a new thread with the
 	 * given command as its first task. The check here errs on the side of
@@ -779,7 +779,7 @@ public class FixThreadPoolExecutor extends AbstractExecutorService {
 
 	/**
 	 * Drains the task queue into a new list. Used by shutdownNow. Call only
-	 * while holding main lock.
+	 * while holding run lock.
 	 */
 	private List<Runnable> drainQueue() {
 		List<Runnable> taskList = new ArrayList<Runnable>();
